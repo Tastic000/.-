@@ -1,21 +1,30 @@
-<html>
-  <head>
-    <style>
-#player {
-  backround: #d4c84f;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-    
-      }
-    </style>
-  </head>
-  <body>
-    <div id="player"></div>
-    <script>
-      function setPosition(sprite) {
-     var e = document.getElementById(sprite.element);  
-      }
-    </script>
-  </body>
-</html>
+<html><head>
+<style>
+#player{
+   background: #d4c84f;
+   width: 20px;
+   height: 20px;
+   position: absolute;
+}
+</style>
+</head>
+<body>
+<div id="player"></div>
+<script>
+
+var player = new Object();
+player.element = 'player';
+player.x = 250;
+player.y = 460;
+
+function setPosition(sprite) {
+  var e = document.getElementById(spirite.element);
+  e.style.left = sprite.x + 'px';
+  e.style.top = sprite.y  + 'px';
+}
+
+setPosition(player);
+
+</script>
+
+</body></html>
